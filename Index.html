@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Área de Salud</title>
+</head>
+<body>
+ <h1>ÁREA DE SALUD</h1>
+    <nav>
+      <ul>
+        <li><a href="imc">Cálculo de IMC</a></li>
+        <li><a href="actividad">Registro de actividad física</a></li>
+        <li><a href="alimentacion">Control de alimentación</a></li>
+        <li><a href="especialidad">Identificación de especialidad de salud</a></li>
+        <li><a href="sueno">Registro de horas de sueño</a></li>
+      </ul>
+    </nav>
+
+<h2>Cálculo de Índice de Masa Corporal (IMC)</h2>
+<label for="peso">Peso (kg):</label>
+<input type="number" id="peso" placeholder="Ingresa tu peso">
+<label for="altura">Altura (m):</label>
+<input type="number" id="altura" placeholder="Ingresa tu altura">
+<button onclick="calcularIMC()">Calcular</button>
+<p id="resultadoIMC"></p>
+
+<h2>Registrar Actividad Física</h2>
+<label for="numDias">¿Cuántos días quieres registrar?</label>
+<input type="number" id="numDias" placeholder="Número de días">
+<button onclick="pedirActividades()">Ingresar actividades</button>
+<div id="actividadesInputs"></div>
+<p id="resultadoPromedioActividad"></p>
+
+<h2>Control de Alimentación</h2>
+<label for="calorias">Ingresa calorías consumidas (kcal). Ingresa 0 para terminar:</label>
+<input type="number" id="calorias" placeholder="Calorías">
+<button onclick="agregarCalorias()">Agregar</button>
+<p id="resultadoCalorias">Días > 2500 kcal: 0</p>
+
+<h2>Identificar Especialidad de Salud</h2>
+<label for="codigo">Ingresa un código (1-5):</label>
+<input type="number" id="codigo" placeholder="Código">
+<button onclick="identificarEspecialidad()">Identificar</button>
+<p id="resultadoEspecialidad"></p>
+
+<h2>Registro de Horas de Sueño</h2>
+<label for="horasSueno">Ingresa horas de sueño o escribe "no" para terminar:</label>
+<input type="text" id="horasSueno" placeholder="Horas">
+<button onclick="registrarSueno()">Agregar</button>
+<p id="resultadoSueno"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
